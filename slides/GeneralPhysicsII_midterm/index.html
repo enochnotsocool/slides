@@ -28,7 +28,7 @@
 				<section data-markdown>
                <script type="text/template">
                # General Physics II
-               ## a quick review
+               ### a quick review before midterm
                <small>Enoch Chen, R04222015</small>
                </script>
 				</section>
@@ -53,10 +53,9 @@
                <section data-markdown>
                   <script type="text/template">
                      ## Linearity of system
-                     Physical equation typically exist like:
-                     $$
-                        \hat{L}(\Psi) = S
-                     $$
+                     Physics equation typically exist like:
+                     $$ \hat{L}(\Psi) = S $$
+
                       * $\Psi$: Physical quantity of interest (electric field, potential... etc )
                       * $S$ : Source, typically given (charge, current)
                       * $\hat{L}$ a *linear* calculation
@@ -92,34 +91,35 @@
                   <script type="text/template">
                      ## Electric field
 
-                     * Guass' Law - $$\int_{\partial V} \vec{E} \cdot d \vec{a} = \frac{1}{\epsilon_0}\int_V dq $$
+                     * <font color=#F60>Guass' Law</font> $$\int_{\partial V} \vec{E} \cdot d \vec{a} = \frac{1}{\epsilon_0}\int_V dq $$
                         * The system has nice symmetry
                         * Planar, cylindrical, spherical systems
                         * Volume where field is explicitly known (in conductors!)
 
-                     * Coulumb's Law - $$\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq(r')}{|\vec{r}-\vec{r}'|^2}$$
-                        * **All** charge distribution's are explicity given:
+                     * <font color=#F60>Coulumb's Law</font> $$\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq(r')}{|\vec{r}-\vec{r}'|^2}$$
+                        * *All* charge distribution's are explicity given
+                  </script>
+               </section>
+
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Electric potential
+
+                     * <font color=#F60>Definition of potential</font>$$V(\vec{a}) - V(\vec{b}) = \int_a^b \vec{E} \cdot d\vec{l}$$
+                       * When the eletric field is explicitly given
+
+                     * <font color=#F60>From Coulumb's Law</font>$$V(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq(\vec{r'})}{|\vec{r}-\vec{r}'|} $$
+                       * When charge configuration is explicitly given
+                       * There is no charge at infinity
                   </script>
                </section>
 
                <section data-markdown>
                   <script type="text/template"/>
                      ## Tip: Review integral tricks
-                     * $u$ substitution:<br /> $u=x^2 + ax +b \;;\quad du = (2ux + a)dx $
+                     * $u$ substitution:<br /> $u=x^2 + ax +b \;;\quad du = (2x + a)dx $
                      * Trignometry substituion:<br /> $\tan^2(\theta) = x^2 \; ; \quad  dx = \sec^2(\theta)d\theta$
-                  </script>
-               </section>
-
-               <section data-markdown>
-                  <script type="text/template">
-                     ## Electric potential
-
-                     * Definition of potential: $$V(\vec{a}) - V(\vec{b}) = \int_a^b \vec{E} \cdot d\vec{l}$$
-                       * When the eletric field is explicitly given
-
-                     * From Coulumb's law: $$V(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq}{|\vec{r}-\vec{r}'|} $$
-                       * When charge configuration is explicitly given
-                       * There is no charge at infinity
                   </script>
                </section>
 
@@ -148,7 +148,7 @@
 
                <section data-markdown>
                   <script type="text/template">
-                  ## Kirchhhoff's Laws
+                  ## Kirchhoff's Laws
 
                   * Current is conserves at every junction
                   * Voltage drop arond any loop must be zero
@@ -259,6 +259,138 @@
                      A simple way of displaying error in measurements
                   </script>
                </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Representing Finite accuracy
+                     All measurements have a finite accuracy and methodology uncertainties, the most formal way to write a measured number is to include everything (Ex.):
+
+                     * Electron Mass:
+                        $$( 5.4857990946 \pm 0.0000000022 )\times 10^{-4} (amu)$$
+                       * 6 : Limit of precision.
+                       * 0.0.. 22: Error in measurement (statistical, systematics)
+                  </script>
+               </section>
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Representing finite accuracy
+
+                     But always writing the error is bothersome, so we write:
+                        $$5.48579909(46) \times 10^{-4} (amu)$$
+                     Meaning the last two digits are uncertain
+
+                     Sometimes we obmit the brakets altogether!
+                        $$5.485799095 \times 10^{-4} (amu)$$
+                     This already means the last digit contains uncertainties
+
+                     We say this measurement has 10 *significant digits*
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ### Significant digit arithmatics - addition
+                     ```
+                       2.062|4
+                     + 0.006|789
+                     ------------
+                       2.069|189
+                     ```
+                     Everything after the vertical line are *potentially* contaminated with the uncertainty of the trailing 4,
+                     there is no point in displaying the numbers one digit after the vertical line
+
+                     In scientific notation, we write:
+                     $$2.0624 + 6.789\times10^{-3} = 2.0692$$
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ### Signitiface digit arithmatics - multiplication
+                     ```
+                          2 . 0 6 2
+                     x    1 . 2 3 4
+                     ---------------
+                           |8 2 4 8
+                          6 1 8|6
+                        4 1 2|4
+                      2 0 6|2
+                     ---------------
+                      2.5 4|4 5 0 8
+                      ```
+                     Everything behind the bar is *potentially* contaminated with uncertainties!
+
+                     In scientific notation, we write:
+                     $$2.062 \times 1.234 = 2.545$$
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template"/>
+                  ### Significant digit arithmatics - Division
+                  ```
+                             1 1 .|8
+                      ----------------
+                  123 | 1 4 5 2 . 6 2
+                        1 2|3
+                        --------------
+                          2|2 2 .
+                          1 2 3
+                          ------------
+                           |9 9 . 6
+                            9 8 . 4
+                            ----------
+                           |0 1 . 2 2
+                  ```
+                  Everything behind the bar is *potentially* contaminated with uncertainties!
+
+                  We write:
+                  $$ 1.45262\times 10^3 / 123 = 1.18 \times 10^{3}$$
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ### Significant digit arithmatics - others
+                     All other opreation are essentailly addition, multiplication and division!
+
+                     #### But!
+                     * For special functions, which expansion do you use? For square roots:
+                        * Taylor expansion from 1?
+                        * Binary search?
+                        * WTF Algorithm?
+                     * In a list of multiplications/division:
+                        * What order?
+                        * When to remove trailing digits?
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template"/>
+                  ## Loose arithmatics
+                  Significant digits <font color=#F60>doesn't</font> represent uncertainty/error in measurement!
+                  Much more studies for actual uncertainty propagation: (error correlation, treatment of statistical and systematic errors...)
+
+                  ---
+
+                  We shouldn't waste time on rigorous significant digits arithmatics, just enough so that the reader could grasp the approximate errors quickly!
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template"/>
+                  ## Rules of thumb
+
+                  * For any operation that is not addition:
+                     * Operations on with significant digits $s_1$, $s_2$, $s_3$ ... will have $min(s_1,s_2,s_3,...)$ significant digits
+                     * Signicant digit rounding *could* be obmitted until the final operation
+                  * For addition, there is no short cut.
+                  * Use scientific notation! It avoid confusion when we write: $$8\times8=60$$
+                    In scientific notation this is $$8\times 8 = 6 \times 10^1$$
+
+                  </script>
+               </section>
+
             </section>
 
             <section>
@@ -269,14 +401,68 @@
                   What is the difference, and why could be define $V$ in circuits
                   </script>
                </section>
-            </section>
 
-            <section>
                <section data-markdown>
                   <script type="text/template">
-                     ## Dipoles extended
+                  ## Defining $\mathcal{E}$
+                  In circuits, something is pushing the charge other than electric fields! So we define
+                  $$
+                     \vec{f} = \vec{f}_s + \vec{E}
+                  $$
+                  Where $\vec{f}$ is the true *force per unit charge*, with a mystery source term $\vec{f}_s$, which gives us:
+                  $$
+                     \oint \vec{f} \cdot d\vec{l} = \mathcal{E}
+                  $$
+                  </script>
+               </section>
 
-                     Why dipoles are useful in calculations
+               <section data-markdown>
+                  <script type="text/template">
+                  ## Relation between $V$ and $\mathcal{E}$
+                  We still have
+                  $$\oint \vec{E} \cdot d\vec{l} = 0$$
+                  So we could define a potential $V$, but if $\vec{f}_s$ is localized and non-resistance, then in the source we have:
+                  $$ \vec{E} = -\vec{f}_s $$,
+                  so if we attempt to define the potential difference at either ends of the source we have:
+                  $$ \Delta V = -\int_a^b \vec{E}\cdot \vec{l} = \int_a^b \vec{f}_s \cdot d\vec{l} = \oint \vec{f}_s \cdot d\vec{l} = \mathcal{E}$$
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template"/>
+                  ## Kirchhoff's Law revisited
+                  Since over the full loop
+                  $$\Delta V = \oint \vec{E} \cdot d \vec{l} = 0$$
+                  So if we single out the sources as being special, we could then write:
+                  $$\Delta V_{other} - \sum \mathcal{E} = 0$$
+
+                  So we should write:
+                  >> Voltage drop in the non-source compenents of the whole loop is equal to the EMF provided by the source
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                  ## Electric field as $\mathcal{E}$?
+                  In Faraday's law, we see that:
+                  $$\oint_{\partial A} \vec{E}\cdot d\vec{l}  = -\frac{\partial}{\partial t} \int_A \vec{B} \cdot d\vec{a}$$
+
+                  Wait... so $\vec{E}$ could be a source of $\mathcal{E}$? Doesn't this break our definition?
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                  ## Superpostion to the rescue!
+                  Assuming the region where the Faraday induction occurs is localized, we could simply take it as any other $\mathcal{E}$!
+
+                  * We define $V$ using the conservative part of $\vec{E}$
+                  * We define $\mathcal{E}$ with the non-conservative part of$\vec{E}$
+
+                  Everything works out!
+
+                  ---
+                  <small>Until induction is not localize, we will need more powerful tools!</small>
                   </script>
                </section>
             </section>
