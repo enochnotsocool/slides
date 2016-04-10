@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>General Physics II - A quick review </title>
+		<meta name="description" content="A quick review for general physics">
+		<meta name="author" content="Enoch Chen">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/general.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+               <script type="text/template">
+               # General Physics II
+               ## a quick review
+               <small>Enoch Chen, R04222015</small>
+               </script>
+				</section>
+
+				<section data-markdown>
+               <script type="text/template">
+                  # Things to remember
+                  * What equation you **could** use
+                  * What equation you *should* use
+                  * Properties of the equation you could exploit:
+                     * *The super position principle!!*
+               </script>
+            </section>
+
+            <section>
+               <section data-markdown>
+                  <script type="text/template">
+                     # Superposition principle
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Linearity of system
+                     Physical equation typically exist like:
+                     $$
+                        \hat{L}(\Psi) = S
+                     $$
+                      * $\Psi$: Physical quantity of interest (electric field, potential... etc )
+                      * $S$ : Source, typically given (charge, current)
+                      * $\hat{L}$ a *linear* calculation
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Definition of linearity
+
+                     If $\hat{L}(\Psi_1) = S_1$ and $\hat{L}(\Psi_2) = S_2$, then
+
+                     $\hat{L}(a \Psi_1 + b \Psi_2) = a S_1 + b S_2$
+
+                     Some things not so obvious:
+                     * a, b could be *negative*!
+                     * a, b could be *complex*!
+                     * **All** problem in qeneral physics are linear!
+                  </script>
+               </section>
+            </section>
+
+            <section>
+               <section data-markdown>
+                  <script type="text/template">
+                     # Electro-static
+                     * No net change in charge
+                     * No change in magnetic field
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Electric field
+
+                     * Guass' Law - $$\int_{\partial V} \vec{E} \cdot d \vec{a} = \frac{1}{\epsilon_0}\int_V dq $$
+                        * The system has nice symmetry
+                        * Planar, cylindrical, spherical systems
+                        * Volume where field is explicitly known (in conductors!)
+
+                     * Coulumb's Law - $$\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq(r')}{|\vec{r}-\vec{r}'|^2}$$
+                        * **All** charge distribution's are explicity given:
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template"/>
+                     ## Tip: Review integral tricks
+                     * $u$ substitution:<br /> $u=x^2 + ax +b \;;\quad du = (2ux + a)dx $
+                     * Trignometry substituion:<br /> $\tan^2(\theta) = x^2 \; ; \quad  dx = \sec^2(\theta)d\theta$
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Electric potential
+
+                     * Definition of potential: $$V(\vec{a}) - V(\vec{b}) = \int_a^b \vec{E} \cdot d\vec{l}$$
+                       * When the eletric field is explicitly given
+
+                     * From Coulumb's law: $$V(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq}{|\vec{r}-\vec{r}'|} $$
+                       * When charge configuration is explicitly given
+                       * There is no charge at infinity
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Capacitance
+
+                     * By definition: $$C = Q / V $$
+
+                     * If your capcitance has special geometry:
+                       * Planar: $$\kappa \epsilon_0 A / d$$
+                       * Spherical: $$4\pi \kappa \epsilon_0 \frac{ab}{a-b}$$
+                  </script>
+               </section>
+            </section>
+
+            <section>
+               <section data-markdown>
+                  <script type="text/template">
+                     # R/C Circuits
+
+                     * Current (I): Charge passing through a cross section per unit time
+                     * Relation between Q, I and V
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                  ## Kirchhhoff's Laws
+
+                  * Current is conserves at every junction
+                  * Voltage drop arond any loop must be zero
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Ohmic relation - A Linear relation
+
+                     * Macroscopic form: $$V=IR$$
+
+                     * Microscopic form: $$\vec{E} = \rho \vec{J}$$
+
+                     * Power disapation $$P=IV$$
+                        * Why? (Think the definition of I and V)
+                        * Extended forms $I^2R$, $V^2/R$
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Capacitance in circuits
+
+                     $$Q = \int I \,dt$$
+                     Total Q must be conserved.
+
+                     $$ V = Q /C $$
+                     Voltage drop across capacitance is computed by capacitance
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Capaticance in circuit
+
+                     Series configuration
+                     $$\frac{1}{C_s} = \sum_n \frac{1}{C_n}$$
+
+                     Parallel configuration
+                     $$C_P = \sum_n C_n$$
+
+                     Keep in mind how one complex capacitor could be broken down into multiple capacitors!
+                        * Find common voltage parts
+                        * Define isolated parts
+                  </script>
+               </section>
+            </section>
+
+            <section>
+               <section data-markdown>
+                  <script type="text/template">
+                     # Static Magnetism
+                     * No change in net charge
+                     * No change in magnetic field
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template"/>
+                     ## Lorentz Force
+
+                     * For a single paricle:
+                     $$\vec{F} = q \vec{v} \times \vec{B}$$
+
+                     * For a section of wire:
+                     $$\vec{F} = L \vec{I} \times \vec{B}$$
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script = type="text/template"/>
+                  ## Magnetic field from steady currents
+
+                  * Amphere's Law:
+                  $$\oint_{\partial A} \vec{B} \cdot d\vec{l} = \int_A \vec{J} \cdot d\vec{a} $$
+                    * When system has symmetry!
+                    * When field at point's is explicitly known
+
+                  * Biot-Savart Law:
+                  $$ \vec{B}(\vec{r}) = \frac{\mu_0}{4\pi} \int \frac{I(\vec{r}') d\vec{l}\times (\vec{r} - \vec{r}')}{ |\vec{r}-\vec{r}'|^3}$$
+                    * When current configuration is explicitly given
+                  </script>
+               </section>
+            </section>
+
+            <section data-markdown>
+               <script type="text/template">
+                  ## That is all you will need to complete the test!
+
+                  * There are quite a lot of problems (8 in 2hr.), so be familiar with what you can use!
+                  * No numbers, so check if results make sense!
+                  * Keep calculation tidy! Show that you understand!
+               </script>
+            </section>
+
+            <section data-markdown>
+               <script type="text/template">
+               # Supplementary material
+               </script>
+            </section>
+
+            <section>
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Significant digits arithmatics
+
+                     A simple way of displaying error in measurements
+                  </script>
+               </section>
+            </section>
+
+            <section>
+               <section data-markdown>
+                  <script type="text/template"/>
+                  ## Electric-Motive-Force V.S. $\Delta V$
+
+                  What is the difference, and why could be define $V$ in circuits
+                  </script>
+               </section>
+            </section>
+
+            <section>
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Dipoles extended
+
+                     Why dipoles are useful in calculations
+                  </script>
+               </section>
+            </section>
+
+         </div>
+
+      </div>
+
+      <script src="../../lib/js/head.min.js"></script>
+      <script src="../../js/reveal.js"></script>
+      <script>
+      Reveal.initialize({
+         controls: true,
+         progress: true,
+         history: true,
+         center: true,
+         slideNumber: true,
+         transition: 'slide',
+         math: {
+            mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+         },
+
+         dependencies: [
+            { src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../../plugin/zoom-js/zoom.js', async: true },
+            { src: '../../plugin/notes/notes.js', async: true },
+            { src: '../../plugin/math/math.js', async: true }
+         ]
+      });
+      </script>
+   </body>
+   </html>
