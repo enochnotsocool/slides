@@ -36,10 +36,12 @@
 				<section data-markdown>
                <script type="text/template">
                   # Things to remember
-                  * What equation you **could** use
-                  * What equation you *should* use
+                  * What equation you **<font color=#F60>could</font>** use
+                  * What equation you *<font color=#F60>should</font>* use
                   * Properties of the equation you could exploit:
                      * *The super position principle!!*
+                  * Properties of the system you could exploit:
+                     * *Symmetries!!*
                </script>
             </section>
 
@@ -47,6 +49,8 @@
                <section data-markdown>
                   <script type="text/template">
                      # Superposition principle
+
+                     Piecing together parts we understand
                   </script>
                </section>
 
@@ -93,11 +97,10 @@
 
                      * <font color=#F60>Guass' Law</font> $$\int_{\partial V} \vec{E} \cdot d \vec{a} = \frac{1}{\epsilon_0}\int_V dq $$
                         * The system has nice symmetry
-                        * Planar, cylindrical, spherical systems
-                        * Volume where field is explicitly known (in conductors!)
+                        * Volume where field is explicitly known (conductors!)
 
                      * <font color=#F60>Coulumb's Law</font> $$\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq(r')}{|\vec{r}-\vec{r}'|^2}$$
-                        * *All* charge distribution's are explicity given
+                        * <font color=#F60>All</font> charge distribution's are explicity given
                   </script>
                </section>
 
@@ -126,12 +129,14 @@
                <section data-markdown>
                   <script type="text/template">
                      ## Capacitance
-
-                     * By definition: $$C = Q / V $$
+                     * Requirements :
+                        * *Exactly* two interacting conductors
+                        * Both initially *neutral*!
+                     * By definition: $$C = \frac{Q}{\Delta V} $$
 
                      * If your capcitance has special geometry:
-                       * Planar: $$\kappa \epsilon_0 A / d$$
-                       * Spherical: $$4\pi \kappa \epsilon_0 \frac{ab}{a-b}$$
+                       * Planar: $\kappa \epsilon_0 A / d$
+                       * Spherical: $ 4\pi \kappa \epsilon_0 \frac{ab}{a-b}$
                   </script>
                </section>
             </section>
@@ -141,8 +146,22 @@
                   <script type="text/template">
                      # R/C Circuits
 
-                     * Current (I): Charge passing through a cross section per unit time
-                     * Relation between Q, I and V
+                     * Relation between Q, I and V by components R and C
+                  </script>
+               </section>
+
+               <section data-markdown>
+                  <script type="text/template">
+                     ## Current / Current density
+
+                     Charge flux per unit time:
+                     $$I = \frac{dq}{dt}$$
+
+                     ---
+
+                     When we are interested in the charge distribution, we need current density:
+                     Charge flux per unit area per unit time
+                     $$\vec{J} = \frac{dq}{dA \,dt} \hat{n}$$
                   </script>
                </section>
 
@@ -150,14 +169,14 @@
                   <script type="text/template">
                   ## Kirchhoff's Laws
 
-                  * Current is conserves at every junction
-                  * Voltage drop arond any loop must be zero
+                  * <font color=#F60>Charge conservation:</font> Current is conserves at every junction
+                  * <font color=#F60>Conservative field:</font> Voltage drop around any loop must be zero
                   </script>
                </section>
 
                <section data-markdown>
                   <script type="text/template">
-                     ## Ohmic relation - A Linear relation
+                     ## Resistance - Ohmic relation
 
                      * Macroscopic form: $$V=IR$$
 
@@ -173,11 +192,11 @@
                   <script type="text/template">
                      ## Capacitance in circuits
 
-                     $$Q = \int I \,dt$$
-                     Total Q must be conserved.
-
                      $$ V = Q /C $$
-                     Voltage drop across capacitance is computed by capacitance
+                     Notice:
+                        * Q is the charge of a <font color=#F60>single side!</font>
+                        * By definition, the total charge of a capacitor(both sides) is <font color=#F60>always zero!</font>
+                        * For charges passed between capacitance, remember charge conservation!
                   </script>
                </section>
 
@@ -193,7 +212,7 @@
 
                      Keep in mind how one complex capacitor could be broken down into multiple capacitors!
                         * Find common voltage parts
-                        * Define isolated parts
+                        * Define (approximately) isolated parts
                   </script>
                </section>
             </section>
@@ -211,10 +230,12 @@
                   <script type="text/template"/>
                      ## Lorentz Force
 
-                     * For a single paricle:
+                     For a single paricle:
                      $$\vec{F} = q \vec{v} \times \vec{B}$$
 
-                     * For a section of wire:
+                     ---
+
+                     For a section of wire:
                      $$\vec{F} = L \vec{I} \times \vec{B}$$
                   </script>
                </section>
@@ -263,21 +284,27 @@
                <section data-markdown>
                   <script type="text/template">
                      ## Representing Finite accuracy
-                     All measurements have a finite accuracy and methodology uncertainties, the most formal way to write a measured number is to include everything (Ex.):
+                     All measurements have a finite accuracy
+
+                     Conveying all information in a precise fashion
 
                      * Electron Mass:
                         $$( 5.4857990946 \pm 0.0000000022 )\times 10^{-4} (amu)$$
-                       * 6 : Limit of precision.
+                       * ....6 : Limit of precision
                        * 0.0.. 22: Error in measurement (statistical, systematics)
                   </script>
                </section>
                <section data-markdown>
                   <script type="text/template">
-                     ## Representing finite accuracy
+                     ## Simplified representations
+
+                     ---
 
                      But always writing the error is bothersome, so we write:
                         $$5.48579909(46) \times 10^{-4} (amu)$$
                      Meaning the last two digits are uncertain
+
+                     ---
 
                      Sometimes we obmit the brakets altogether!
                         $$5.485799095 \times 10^{-4} (amu)$$
@@ -329,9 +356,9 @@
                   <script type="text/template"/>
                   ### Significant digit arithmatics - Division
                   ```
-                             1 1 .|8
-                      ----------------
-                  123 | 1 4 5 2 . 6 2
+                            1 1 .|8
+                       ----------------
+                  123 / 1 4 5 2 . 6 2
                         1 2|3
                         --------------
                           2|2 2 .
@@ -354,11 +381,9 @@
                      ### Significant digit arithmatics - others
                      All other opreation are essentailly addition, multiplication and division!
 
-                     #### But!
-                     * For special functions, which expansion do you use? For square roots:
-                        * Taylor expansion from 1?
+                     * For special functions, which expansion do you use?
+                        * Taylor expansion? (from where?)
                         * Binary search?
-                        * WTF Algorithm?
                      * In a list of multiplications/division:
                         * What order?
                         * When to remove trailing digits?
@@ -369,7 +394,7 @@
                   <script type="text/template"/>
                   ## Loose arithmatics
                   Significant digits <font color=#F60>doesn't</font> represent uncertainty/error in measurement!
-                  Much more studies for actual uncertainty propagation: (error correlation, treatment of statistical and systematic errors...)
+                  Much more studies for actual uncertainty propagation: (error correlation, treatment of statistical errors, concrete ways of eliminating systematic errors...)
 
                   ---
 
@@ -391,6 +416,21 @@
                   </script>
                </section>
 
+               <section data-markdown>
+                  <script type="text/template">
+                     ### Mathematical numbers/measured numbers
+                     $$ \sqrt{2}\neq 1.414 \; ;\quad \frac{1}{8} \neq 0.125 \quad (!!!)$$
+
+                     * Mathematical operation implies mathematical precision
+                        * 16 people divided into 4 groups
+                        * Mathematical constants $e$, $\pi$, $\frac{1}{2}$
+
+                     * Decimal notation implies uncertainties:
+                        * $1.6\times10^4$ people divided into 8 groups
+
+                     >> In assigments, if decimal numbers are given, please convert into decimal notation
+                  </script>
+               </section>
             </section>
 
             <section>
@@ -411,7 +451,7 @@
                   $$
                   Where $\vec{f}$ is the true *force per unit charge*, with a mystery source term $\vec{f}_s$, which gives us:
                   $$
-                     \oint \vec{f} \cdot d\vec{l} = \mathcal{E}
+                     \oint \vec{f} \cdot d\vec{l} = \oint \vec{f}_s \cdot  d\vec{l}= \mathcal{E}
                   $$
                   </script>
                </section>
@@ -434,6 +474,7 @@
                   Since over the full loop
                   $$\Delta V = \oint \vec{E} \cdot d \vec{l} = 0$$
                   So if we single out the sources as being special, we could then write:
+
                   $$\Delta V_{other} - \sum \mathcal{E} = 0$$
 
                   So we should write:
@@ -459,7 +500,7 @@
                   * We define $V$ using the conservative part of $\vec{E}$
                   * We define $\mathcal{E}$ with the non-conservative part of$\vec{E}$
 
-                  Everything works out!
+                  Everything still works out!
 
                   ---
                   <small>Until induction is not localize, we will need more powerful tools!</small>
@@ -467,6 +508,13 @@
                </section>
             </section>
 
+            <section data-markdown>
+               <script type="text/template">
+                  # Thanks for your attention!
+
+                  Feel free to ask any question inperson or by email!
+               </script>
+            </section>
          </div>
 
       </div>
