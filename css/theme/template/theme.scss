@@ -136,7 +136,7 @@ body {
 .reveal blockquote {
 	display: block;
 	position: relative;
-	width: 70%;
+	width: 90%;
 	margin: $blockMargin auto;
 	padding: 5px;
 
@@ -227,6 +227,11 @@ body {
 
 .reveal small * {
 	vertical-align: top;
+}
+
+.MathJax_Display {
+   border-radius: 25px;
+   background: #111;
 }
 
 
@@ -341,5 +346,3 @@ body {
 		   -moz-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 		        transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 	}
-
-

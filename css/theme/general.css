@@ -99,10 +99,10 @@ body {
   list-style-type: disc; }
 
 .reveal ul ul {
-  list-style-type: circle; }
+  list-style-type: square; }
 
 .reveal ul ul ul {
-  list-style-type: square; }
+  list-style-type: circle; }
 
 .reveal ul ul,
 .reveal ul ol,
@@ -124,7 +124,7 @@ body {
 .reveal blockquote {
   display: block;
   position: relative;
-  width: 95%;
+  width: 90%;
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
@@ -201,19 +201,8 @@ body {
   vertical-align: top; }
 
 .MathJax_Display {
-   border-radius: 25px;
-   margin: 10px;
-   padding-top: 100px;
-   padding: 50px;
-   background: #111;
-}
-.MathJax {
-   border-radius: 5px;
-   margin: 10px;
-   padding-top: 100px;
-   padding: 50px;
-   background: #111;
-}
+  border-radius: 25px;
+  background: #111; }
 
 /*********************************************
  * LINKS
@@ -221,9 +210,9 @@ body {
 .reveal a {
   color: #42affa;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
 
 .reveal a:hover {
   color: #8dcffc;
@@ -248,9 +237,9 @@ body {
   box-shadow: none; }
 
 .reveal a img {
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
