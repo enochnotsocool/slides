@@ -77,7 +77,7 @@
                      Some things not so obvious:
                      * a, b could be *negative*!
                      * a, b could be *complex*!
-                     * **All** problem in qeneral physics are linear!
+                     * **All** problem in general physics are linear!
                   </script>
                </section>
             </section>
@@ -95,12 +95,12 @@
                   <script type="text/template">
                      ## Electric field
 
-                     * <font color=#F60>Guass' Law</font> $$\int_{\partial V} \vec{E} \cdot d \vec{a} = \frac{1}{\epsilon_0}\int_V dq $$
+                     * <font color=#F60>Gauss' Law</font> $$\int_{\partial V} \vec{E} \cdot d \vec{a} = \frac{1}{\epsilon_0}\int_V dq $$
                         * The system has nice symmetry
                         * Volume where field is explicitly known (conductors!)
 
-                     * <font color=#F60>Coulumb's Law</font> $$\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{ (\vec{r}-\vec{r'})dq(\vec{r}')}{|\vec{r}-\vec{r}'|^3}$$
-                        * <font color=#F60>All</font> charge distribution's are explicity given
+                     * <font color=#F60>Coulomb's Law</font> $$\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{ (\vec{r}-\vec{r'})dq(\vec{r}')}{|\vec{r}-\vec{r}'|^3}$$
+                        * <font color=#F60>All</font> charge distribution's are explicitly given
                   </script>
                </section>
 
@@ -110,9 +110,9 @@
                      ## Electric potential
 
                      * <font color=#F60>Definition of potential</font>$$V(\vec{a}) - V(\vec{b}) = \int_a^b \vec{E} \cdot d\vec{l}$$
-                       * When the eletric field is explicitly given
+                       * When the electric field is explicitly given
 
-                     * <font color=#F60>From Coulumb's Law</font>$$V(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq(\vec{r'})}{|\vec{r}-\vec{r}'|} $$
+                     * <font color=#F60>From Coulomb's Law</font>$$V(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{dq(\vec{r'})}{|\vec{r}-\vec{r}'|} $$
                        * When charge configuration is explicitly given
                        * There is no charge at infinity
                   </script>
@@ -122,7 +122,7 @@
                   <script type="text/template"/>
                      ## Tip: Review integral tricks
                      * $u$ substitution:<br /> $u=x^2 + ax +b \;;\quad du = (2x + a)dx $
-                     * Trignometry substituion:<br /> $\tan^2(\theta) = x^2 \; ; \quad  dx = \sec^2(\theta)d\theta$
+                     * Trigonometry substitution:<br /> $\tan^2(\theta) = x^2 \; ; \quad  dx = \sec^2(\theta)d\theta$
                   </script>
                </section>
 
@@ -134,7 +134,7 @@
                         * Both initially *neutral*!
                      * By definition: $$C = \frac{Q}{\Delta V} $$
 
-                     * If your capcitance has special geometry:
+                     * If your capacitance has special geometry:
                        * Planar: $\kappa \epsilon_0 A / d$
                        * Spherical: $ 4\pi \kappa \epsilon_0 \frac{ab}{a-b}$
                   </script>
@@ -182,7 +182,7 @@
 
                      * Microscopic form: $$\vec{E} = \rho \vec{J}$$
 
-                     * Power disapation $$P=IV$$
+                     * Power dissipation $$P=IV$$
                         * Why? (Think the definition of I and V)
                         * Extended forms $I^2R$, $V^2/R$
                   </script>
@@ -202,7 +202,7 @@
 
                <section data-markdown>
                   <script type="text/template">
-                     ## Capaticance in circuit
+                     ## Capacitance in circuit
 
                      Series configuration
                      $$\frac{1}{C_s} = \sum_n \frac{1}{C_n}$$
@@ -230,7 +230,7 @@
                   <script type="text/template"/>
                      ## Lorentz Force
 
-                     For a single paricle:
+                     For a single particle:
                      $$\vec{F} = q \vec{v} \times \vec{B}$$
 
                      ---
@@ -244,7 +244,7 @@
                   <script = type="text/template"/>
                   ## Magnetic field from steady currents
 
-                  * Amphere's Law:
+                  * Ampere's Law:
                   $$\oint_{\partial A} \vec{B} \cdot d\vec{l} = \int_A \vec{J} \cdot d\vec{a} $$
                     * When system has symmetry!
                     * When field at point's is explicitly known
@@ -275,7 +275,7 @@
             <section>
                <section data-markdown>
                   <script type="text/template">
-                     ## Significant digits arithmatics
+                     ## Significant digits arithmetics
 
                      A simple way of displaying error in measurements
                   </script>
@@ -306,7 +306,7 @@
 
                      ---
 
-                     Sometimes we obmit the brakets altogether!
+                     Sometimes we omit the brackets altogether!
                         $$5.485799095 \times 10^{-4} (amu)$$
                      This already means the last digit contains uncertainties
 
@@ -316,7 +316,7 @@
 
                <section data-markdown>
                   <script type="text/template">
-                     ### Significant digit arithmatics - addition
+                     ### Significant digit arithmetics - addition
                      ```
                        2.062|4
                      + 0.006|789
@@ -333,7 +333,7 @@
 
                <section data-markdown>
                   <script type="text/template">
-                     ### Signitiface digit arithmatics - multiplication
+                     ### Significant digit arithmetics - multiplication
                      ```
                           2 . 0 6 2
                      x    1 . 2 3 4
@@ -354,7 +354,7 @@
 
                <section data-markdown>
                   <script type="text/template"/>
-                  ### Significant digit arithmatics - Division
+                  ### Significant digit arithmetics - Division
                   ```
                             1 1 .|8
                        ----------------
@@ -378,8 +378,8 @@
 
                <section data-markdown>
                   <script type="text/template">
-                     ### Significant digit arithmatics - others
-                     All other opreation are essentailly addition, multiplication and division!
+                     ### Significant digit arithmetics - others
+                     All other operation are essentially addition, multiplication and division!
 
                      * For special functions, which expansion do you use?
                         * Taylor expansion? (from where?)
@@ -392,13 +392,13 @@
 
                <section data-markdown>
                   <script type="text/template"/>
-                  ## Loose arithmatics
+                  ## Loose arithmetics
                   Significant digits <font color=#F60>doesn't</font> represent uncertainty/error in measurement!
                   Much more studies for actual uncertainty propagation: (error correlation, treatment of statistical errors, concrete ways of eliminating systematic errors...)
 
                   ---
 
-                  We shouldn't waste time on rigorous significant digits arithmatics, just enough so that the reader could grasp the approximate errors quickly!
+                  We shouldn't waste time on rigorous significant digits arithmetics, just enough so that the reader could grasp the approximate errors quickly!
                   </script>
                </section>
 
@@ -408,7 +408,7 @@
 
                   * For any operation that is not addition:
                      * Operations on with significant digits $s_1$, $s_2$, $s_3$ ... will have $min(s_1,s_2,s_3,...)$ significant digits
-                     * Signicant digit rounding *could* be obmitted until the final operation
+                     * Significant digit rounding *could* be omitted until the final operation
                   * For addition, there is no short cut.
                   * Use scientific notation! It avoid confusion when we write: $$8\times8=60$$
                     In scientific notation this is $$8\times 8 = 6 \times 10^1$$
@@ -419,7 +419,7 @@
                <section data-markdown>
                   <script type="text/template">
                      ### Mathematical numbers/measured numbers
-                     $$ \sqrt{2}\neq 1.414 \; ;\quad \frac{1}{8} \neq 0.125 \quad (!!!)$$
+                     $$ \sqrt{2}\neq 1.414 \; ;\quad \frac{1}{8} \neq 0.125 (!)\; ; \quad 4 \neq 4.00(!!!)$$
 
                      * Mathematical operation implies mathematical precision
                         * 16 people divided into 4 groups
@@ -428,7 +428,7 @@
                      * Decimal notation implies uncertainties:
                         * $1.6\times10^4$ people divided into 8 groups
 
-                     >> In assigments, if decimal numbers are given, please convert into decimal notation
+                     >> In assignments, if decimal numbers are given, please convert into decimal notation
                   </script>
                </section>
             </section>
@@ -478,7 +478,7 @@
                   $$\Delta V_{other} - \sum \mathcal{E} = 0$$
 
                   So we should write:
-                  >> Voltage drop in the non-source compenents of the whole loop is equal to the EMF provided by the source
+                  >> Voltage drop in the non-source components of the whole loop is equal to the EMF provided by the source
                   </script>
                </section>
 
@@ -494,7 +494,7 @@
 
                <section data-markdown>
                   <script type="text/template">
-                  ## Superpostion to the rescue!
+                  ## Superposition to the rescue!
                   Assuming the region where the Faraday induction occurs is localized, we could simply take it as any other $\mathcal{E}$!
 
                   * We define $V$ using the conservative part of $\vec{E}$
@@ -512,7 +512,7 @@
                <script type="text/template">
                   # Thanks for your attention!
 
-                  Feel free to ask any question inperson or by email!
+                  Feel free to ask any question in person or by email!
                </script>
             </section>
          </div>
